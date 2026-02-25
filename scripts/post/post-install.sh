@@ -65,19 +65,10 @@ mkdir -p ~/source
 
 if [ "$OS" = "fedora" ]; then
     echo "[*] Applying Fedora-specific tweaks..."
-    # Example: enable RPM Fusion, if you want
-    # sudo dnf install -y \
-    #   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-    #   https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 fi
 
 if [ "$OS" = "arch" ]; then
     echo "[*] Applying Arch-specific tweaks..."
-    # Example: enable multilib
-    # sudo sed -i '/
-    #\[multilib\]
-    #/,/Include/s/^#//' /etc/pacman.conf
-    # sudo pacman -Syu --noconfirm
 fi
 
 ########################################

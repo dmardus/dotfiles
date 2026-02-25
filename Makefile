@@ -9,5 +9,5 @@ arch:
     cd scripts/arch && ./install-arch.sh
 
 configs:
-    @echo "[*] Linking configuration files..."
-    ./scripts/link-configs.sh
+    @echo "[*] Linking dotfiles with Stow..."
+    cd config && stow -v -R .

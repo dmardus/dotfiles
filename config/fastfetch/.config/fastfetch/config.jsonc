@@ -1,0 +1,134 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌─────────────────────── Hardware ───────────────────────┐",
+        },
+        {
+            "type": "host",
+            "key": " PC",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├",
+            "showPeCoreCount": true,
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├",
+            "detectionMethod": "pci",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "display",
+            "key": "│ ├󱄄",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "disk",
+            "key": "│ ├󰋊",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "memory",
+            "key": "│ ├",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "swap",
+            "key": "└ └󰓡 ",
+            "keyColor": "#38de21",
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────────┘",
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌─────────────────────── Software ───────────────────────┐",
+        },
+        {
+            "type": "os",
+            "key": "\ue900 OS",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "wm",
+            "key": "│ ├",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "de",
+            "key": " DE",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "terminal",
+            "key": "│ ├",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "terminalfont",
+            "key": "└ └",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "packages",
+            "key": "│ ├󰏖",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├󰉼",
+            "keyColor": "#00bbbb",
+        },
+        {
+            "type": "colors",
+            "key": "│ ├󰸌",
+            "keyColor": "#00bbbb",
+            "symbol": "circle",
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────────┘",
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[90m┌───────────────── Age / Uptime / Update ────────────────┐",
+        },
+        {
+            "type": "command",
+            "key": "󱦟 OS Age",
+            "keyColor": "#ffe50a",
+            "text": "echo $(( ($(date +%s) - $(stat -c %W /)) / 86400 )) days",
+        },
+        {
+            "type": "uptime",
+            "key": "󱫐 Uptime",
+            "keyColor": "#ffe50a",
+        },
+        {
+            "type": "command",
+            "key": " Update",
+            "keyColor": "#ffe50a",
+            "text": "updated=$(omarchy-version-pkgs); echo \"$updated\"",
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[90m└────────────────────────────────────────────────────────┘",
+        },
+        "break",
+    ],
+}

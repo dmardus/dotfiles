@@ -81,6 +81,45 @@ if [ "$OS" = "arch" ]; then
 fi
 
 ########################################
+# Set default browser to Brave
+########################################
+
+if command -v brave-browser >/dev/null 2>&1
+    echo "[*] Setting Brave as default browser..."
+    xdg-settings set default-web-browser brave-browser.desktop
+
+    # Ensure MIME associations
+    xdg-mime default brave-browser.desktop text/html
+    xdg-mime default brave-browser.desktop x-scheme-handler/http
+    xdg-mime default brave-browser.desktop x-scheme-handler/https
+else
+    echo "[!] Brave not installed — skipping default browser setup."
+end
+
+########################################
+# Set default editor to Zed
+########################################
+
+if command -v zed >/dev/null 2>&1
+    echo "[*] Setting Zed as default editor..."
+    xdg-mime default zed.desktop text/plain
+    xdg-mime default zed.desktop inode/directory
+else
+    echo "[!] Zed not installed — skipping default editor setup."
+end
+
+########################################
+# Set default terminal to Ghostty
+########################################
+
+if command -v ghostty >/dev/null 2>&1
+    echo "[*] Setting Ghostty as default terminal..."
+    xdg-mime default ghostty.desktop x-scheme-handler/terminal
+else
+    echo "[!] Ghostty not installed — skipping default terminal setup."
+end
+
+########################################
 # Final message
 ########################################
 

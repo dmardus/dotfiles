@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+echo "🔄 Setting up Fedora..."
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 sudo dnf update -y
@@ -14,4 +16,4 @@ for app in "${apps[@]}"; do
   bash "$SCRIPT_DIR/install-$app.sh"
 done
 
-echo "[✓] Fedora setup complete."
+echo "✨ Fedora setup complete."

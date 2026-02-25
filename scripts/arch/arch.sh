@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+echo "🔄 Setting up Arch..."
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 sudo pacman -Syu --noconfirm
@@ -14,4 +16,4 @@ for app in "${apps[@]}"; do
   bash "$SCRIPT_DIR/install-$app.sh"
 done
 
-echo "[✓] Arch setup complete."
+echo "✨ Arch setup complete."

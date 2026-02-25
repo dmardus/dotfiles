@@ -9,7 +9,7 @@ sudo dnf update -y
 
 apps=(
   curl wget git btop ghostty fastfetch fish nushell starship stow
-  vscode zed windsurf brave joplin
+  vscode zed windsurf brave zen joplin
 )
 
 for app in "${apps[@]}"; do

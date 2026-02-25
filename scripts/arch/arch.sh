@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm
 
 apps=(
   btop ghostty curl fastfetch fish git nushell starship wget stow
-  flatpak yay vscode zed windsurf brave joplin
+  flatpak yay vscode zed windsurf brave zen joplin
 )
 
 for app in "${apps[@]}"; do

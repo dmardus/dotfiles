@@ -8,7 +8,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 sudo dnf update -y
 
 apps=(
-  curl wget git btop ghostty fastfetch fish nushell starship stow
+  curl wget git fish nushell starship stow
+  ghostty opencode claudecode btop fastfetch
   vscode zed windsurf brave zen joplin
 )
 

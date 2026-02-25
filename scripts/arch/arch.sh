@@ -8,7 +8,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 sudo pacman -Syu --noconfirm
 
 apps=(
-  btop ghostty curl fastfetch fish git nushell starship wget stow
+  curl fish git nushell starship wget stow
+  ghostty opencode claudecode btop fastfetch
   flatpak yay vscode zed windsurf brave zen joplin
 )
 

@@ -2,12 +2,16 @@
 
 fedora:
     @echo "[*] Running Fedora installer..."
-    cd scripts/fedora && ./install-fedora.sh
+    cd scripts/fedora && ./fedora.sh
 
 arch:
     @echo "[*] Running Arch installer..."
-    cd scripts/arch && ./install-arch.sh
+    cd scripts/arch && ./arch.sh
 
 configs:
     @echo "[*] Linking dotfiles with Stow..."
     cd config && stow -v -R .
+
+post:
+    @echo "[*] Running post-install tasks..."
+    cd scripts/post && ./post-install.sh

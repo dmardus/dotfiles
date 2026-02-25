@@ -27,3 +27,5 @@ fi
 
 echo "[*] Running Makefile target: $OS"
 make "$OS"
+make "configs"
+make "post"

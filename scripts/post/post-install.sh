@@ -15,6 +15,27 @@ fi
 echo "[*] Detected OS: $OS"
 
 ########################################
+# Install Nerd Fonts from repository
+########################################
+
+echo "[*] Installing Nerd Fonts..."
+
+FONT_SRC="$REPO_ROOT/fonts"
+FONT_DEST="$HOME/.local/share/fonts"
+
+mkdir -p "$FONT_DEST"
+
+if [ -d "$FONT_SRC" ]; then
+    cp -u "$FONT_SRC"/*.ttf "$FONT_DEST" 2>/dev/null || true
+    cp -u "$FONT_SRC"/*.otf "$FONT_DEST" 2>/dev/null || true
+
+    echo "[*] Refreshing font cache..."
+    fc-cache -f "$FONT_DEST"
+else
+    echo "[!] No fonts directory found at $FONT_SRC — skipping font installation."
+fi
+
+########################################
 # Change default shell to fish
 ########################################
 

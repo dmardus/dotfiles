@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
 echo "[*] Installing zed..."
-sudo dnf install -y zed
+curl -f https://zed.dev/install.sh | sh  -s -- -y
 echo "[✓] zed installed."

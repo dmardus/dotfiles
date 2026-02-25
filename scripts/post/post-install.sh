@@ -20,7 +20,7 @@ echo "[*] Detected OS: $OS"
 
 echo "[*] Installing Nerd Fonts..."
 
-FONT_SRC="$REPO_ROOT/fonts"
+FONT_SRC="../../fonts"
 FONT_DEST="$HOME/.local/share/fonts"
 
 mkdir -p "$FONT_DEST"

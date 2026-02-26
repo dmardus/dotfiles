@@ -9,12 +9,16 @@ configs=(
   starship
 )
 
-cd "../../config"
+# Move to repo root
+cd "$(dirname "$0")/../.."
+
+# Move into config folder
+cd config
 
 for cfg in "${configs[@]}"; do
     if [[ "$cfg" == "btop" ]]; then
       rm -f "$HOME/.config/btop/btop.config"
-      rm -rf "themes"
+      rm -rf "$HOME/.config/btop/themes"
     fi
 
     if [[ "$cfg" == "fastfetch" ]]; then
@@ -35,7 +39,4 @@ for cfg in "${configs[@]}"; do
 
     echo "Stowing $cfg"
     stow "$cfg"
-
-    echo "Check that $cfg is stowed"
-    ls "$HOME/.config" -l | grep $cfg
 done

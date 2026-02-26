@@ -53,25 +53,6 @@ else
 fi
 
 ########################################
-# Create common directories
-########################################
-
-echo "[*] Creating common directories..."
-mkdir -p ~/source
-
-########################################
-# OS-specific tweaks
-########################################
-
-if [ "$OS" = "fedora" ]; then
-    echo "[*] Applying Fedora-specific tweaks..."
-fi
-
-if [ "$OS" = "arch" ]; then
-    echo "[*] Applying Arch-specific tweaks..."
-fi
-
-########################################
 # Set default browser to Brave
 ########################################
 

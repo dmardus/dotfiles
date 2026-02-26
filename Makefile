@@ -10,7 +10,7 @@ arch:
 
 configs:
 	@echo "[*] Linking dotfiles with Stow..."
-	cd config && stow -v -R .
+	cd scripts/post && ./apply-configs.sh
 
 post:
 	@echo "[*] Running post-install tasks..."

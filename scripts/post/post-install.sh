@@ -56,7 +56,7 @@ fi
 # Set default browser to Brave
 ########################################
 
-if command -v brave-browser >/dev/null 2>&1
+if command -v brave-browser >/dev/null 2>&1; then
     echo "[*] Setting Brave as default browser..."
     xdg-settings set default-web-browser brave-browser.desktop
 
@@ -66,30 +66,30 @@ if command -v brave-browser >/dev/null 2>&1
     xdg-mime default brave-browser.desktop x-scheme-handler/https
 else
     echo "[!] Brave not installed — skipping default browser setup."
-end
+fi
 
 ########################################
 # Set default editor to Zed
 ########################################
 
-if command -v zed >/dev/null 2>&1
+if command -v zed >/dev/null 2>&1; then
     echo "[*] Setting Zed as default editor..."
     xdg-mime default zed.desktop text/plain
     xdg-mime default zed.desktop inode/directory
 else
     echo "[!] Zed not installed — skipping default editor setup."
-end
+fi
 
 ########################################
 # Set default terminal to Ghostty
 ########################################
 
-if command -v ghostty >/dev/null 2>&1
+if command -v ghostty >/dev/null 2>&1; then
     echo "[*] Setting Ghostty as default terminal..."
     xdg-mime default ghostty.desktop x-scheme-handler/terminal
 else
     echo "[!] Ghostty not installed — skipping default terminal setup."
-end
+fi
 
 ########################################
 # Final message

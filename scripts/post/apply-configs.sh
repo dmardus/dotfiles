@@ -38,5 +38,5 @@ for cfg in "${configs[@]}"; do
     fi
 
     echo "Stowing $cfg"
-    stow "$cfg"
+    stow -d "$(pwd)" -t "$HOME" "$cfg"
 done

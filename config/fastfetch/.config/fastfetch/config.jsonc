@@ -70,7 +70,7 @@
         },
         {
             "type": "de",
-            "key": " DE",
+            "key": "│ ",
             "keyColor": "#00bbbb",
         },
         {
@@ -80,7 +80,7 @@
         },
         {
             "type": "terminalfont",
-            "key": "└ └",
+            "key": "│ └",
             "keyColor": "#00bbbb",
         },
         {
@@ -95,7 +95,7 @@
         },
         {
             "type": "colors",
-            "key": "│ ├󰸌",
+            "key": "└ ├󰸌",
             "keyColor": "#00bbbb",
             "symbol": "circle",
         },

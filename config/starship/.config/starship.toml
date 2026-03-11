@@ -53,12 +53,12 @@ symbol = ' '
 format = 'via [$symbol$branch]($style)'
 # truncation_length = 4
 truncation_symbol = '…/'
-style = 'bold green'
+style = 'italic cyan'
 
 # Shows current git status
 [git_status]
 format = '([ \( $all_status$ahead_behind\)]($style) )'
-style = 'bold green'
+style = 'cyan'
 conflicted = '[ confliced=${count}](red) '
 up_to_date = '[󰘽 up-to-date](green) '
 untracked = '[󰋗 untracked=${count}](red) '
@@ -87,6 +87,6 @@ map_symbol = true
 disabled = false
 
 [sudo]
-style = 'bold green'
+style = 'bold cyan'
 symbol = '👩‍💻 '
 disabled = false

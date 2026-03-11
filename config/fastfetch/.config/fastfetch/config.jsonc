@@ -70,17 +70,12 @@
         },
         {
             "type": "de",
-            "key": "│ ",
+            "key": " DE",
             "keyColor": "#00bbbb",
         },
         {
             "type": "terminal",
             "key": "│ ├",
-            "keyColor": "#00bbbb",
-        },
-        {
-            "type": "terminalfont",
-            "key": "│ └",
             "keyColor": "#00bbbb",
         },
         {
@@ -98,6 +93,11 @@
             "key": "└ ├󰸌",
             "keyColor": "#00bbbb",
             "symbol": "circle",
+        },
+        {
+            "type": "terminalfont",
+            "key": "│ └",
+            "keyColor": "#00bbbb",
         },
         {
             "type": "custom",
@@ -123,7 +123,7 @@
             "type": "command",
             "key": " Update",
             "keyColor": "#ffe50a",
-            "text": "updated=$(omarchy-version-pkgs); echo \"$updated\"",
+            "text": "if command -v dnf &> /dev/null; then dnf check-update | grep -E '^.*\\.\\*' | wc -l; elif command -v pacman &> /dev/null; then pacman -Qu | wc -l; else echo 'Unsupported'; fi",
         },
         {
             "type": "custom",

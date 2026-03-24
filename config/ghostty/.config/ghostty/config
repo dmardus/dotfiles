@@ -48,6 +48,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
+window-width = 100
+window-height = 32
 theme = Cobalt2
 background-blur = true
 background-opacity = 0.9
